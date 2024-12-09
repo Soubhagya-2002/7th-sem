@@ -1,0 +1,243 @@
+\documentclass[12pt,a4paper,twoside]{book}
+\usepackage[top=1.25in, bottom=1.25in, left=1.25in, right=1.25in]{geometry}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage[hyphens]{url}
+\usepackage{booktabs,rotating}
+\usepackage{tabu}
+\usepackage[toc,page]{appendix}
+\usepackage{longtable}
+ \usepackage{multirow}
+\usepackage{hhline}
+ \usepackage{colortbl}
+ \usepackage{lscape}
+\usepackage{multirow}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{booktabs}
+\usepackage{adjustbox}
+\RequirePackage{xcolor}
+\usepackage{setspace}\usepackage[colorlinks=true,breaklinks,backref=true,linkcolor={black},citecolor={Fuchsia},urlcolor={OliveGreen}]{hyperref}
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{caption}
+\usepackage{amsfonts} 
+\usepackage[ruled,vlined]{algorithm2e}
+\usepackage{epigraph}
+\usepackage{float}
+\usepackage[cmex10]{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{fancyvrb}
+\usepackage{epstopdf}
+\usepackage{fancyhdr}
+\usepackage{subcaption} 
+\usepackage{tikz}
+\usepackage[none]{hyphenat}
+%\usepackage{cite}
+%\usepackage{natbib}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{textcomp}
+\usepackage{multirow}
+\usepackage{lscape}
+\usepackage{rotating,tabularx}
+%\newcolumntype{Y}{>{\small\raggedright\arraybackslash}X}
+\renewcommand{\baselinestretch}{1.2} 
+\headsep .4in
+\makeatletter
+\def\url@leostyle{%
+\@ifundefined{selectfont}{\def\UrlFont{\sf}}{\def\UrlFont{\small\ttfamily}}}
+\makeatother
+\usepackage{url}
+\usepackage{tikz}
+\usepgflibrary{shapes.gates.logic.US}
+\usetikzlibrary{trees,shapes}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{arrows}
+\definecolor{MyGray}{RGB}{190,220,220}
+\usepackage{datetime}
+\usepackage{rotating}
+\DeclareUnicodeCharacter{2212}{-}
+\usepackage{array}
+\newcolumntype{R}{>{\raggedright\arraybackslash}p{3cm}}
+
+
+\newdateformat{monthyeardate}{%
+  \monthname[\THEMONTH], \THEYEAR}
+\usepackage{algorithm}
+\usepackage[english]{babel}
+
+\usepackage[noend]{algpseudocode}
+
+
+%\usepackage{algorithmicx, algorithm}
+%\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+%\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+%\setcounter{secnumdepth}{4}
+\let\svthefootnote\thefootnote
+\begin{document}
+\tikzset{
+	photon/.style={decorate, decoration={snake}, draw=red},
+	VectorDAM/.style={draw=black, postaction={decorate},
+		decoration={markings,mark=at position .55 with {\arrow[draw=black]{>}}},
+		decoration={markings,mark=at position .05 with {\arrow[draw=black]{*}} },
+		decoration={markings,mark=at position .95 with {\arrow[draw=black]{*}} } },
+	VectorAM/.style={draw=black, postaction={decorate},
+		decoration={markings,mark=at position .55 with {\arrow[draw=black]{>}}} },
+	gluon/.style={decorate, draw=magenta, decoration={coil,amplitude=4pt, segment length=5pt}} 
+}
+\sloppy
+\thispagestyle{empty}
+\include{front/cover1} %title  
+\clearpage
+
+\pagenumbering{roman}
+
+\thispagestyle{empty}
+\include{front/cover2} %cover
+\clearpage
+%
+\include{front/dedicate} %Dedication
+%
+\addcontentsline{toc}{chapter}{Certificate}
+\include{front/cert} %certificate
+%
+\addcontentsline{toc}{chapter}{Certificate Of Examination}
+\include{front/cert1} %certificate
+%
+\addcontentsline{toc}{chapter}{Declaration of Originality}
+\include{front/origin} %certificate
+%
+\addcontentsline{toc}{chapter}{Acknowledgement}
+\include{front/ackn} %acknowledgementhttps://www.overleaf.com/project/6141aebc690a31f64beb57b5
+\clearpage
+%
+\fontsize{12}{18}
+\selectfont
+\pagestyle{empty}
+%
+\addcontentsline{toc}{chapter}{Abstract}                                                                           
+\include{front/abstract} %abstract
+\let\cleardoublepage\clearpage
+%
+%
+
+\tableofcontents
+%\phantomsection
+\addcontentsline{toc}{chapter}{List of Acronyms}
+\include{front/abbreviation}
+\clearpage
+
+%\tableofcontents
+%\phantomsection
+\addcontentsline{toc}{chapter}{List of Symbols}
+\include{front/symbols}
+\clearpage
+
+\addcontentsline{toc}{chapter}{List of Figures}
+\listoffigures
+\clearpage
+%
+%\phantomsection
+\addcontentsline{toc}{chapter}{List of Tables}
+\listoftables
+\clearpage
+\fontsize{12}{21}
+\selectfont
+%\linespread{1.5}
+\pagenumbering{arabic}
+%\pagestyle{fancy}
+%%
+%\lhead{\textbf{\nouppercase{\leftmark}$\bigm|$}~(\nouppercase{\rightmark})}
+%  \chead{}
+%  \rhead{}
+%  %\lfoot{\today}
+%  \cfoot{}
+%  \rfoot{\thepage}
+%  \renewcommand{\headrulewidth}{0.3pt}
+%  %\renewcommand{\footrulewidth}{0.4pt}
+%
+%  \renewcommand{\chaptermark}[1]{%
+%  \markboth{#1}{}}
+
+
+
+
+
+%\fancyhf{}
+%\rhead{}
+%\lhead{\textbf{Chapter \thechapter}}}
+
+\pagestyle{fancy}
+\fancyhead{}
+
+\fancyhead[LE]{\leftmark}
+\fancyhead[RO]{\rightmark}
+\cfoot{ \thepage}
+
+\renewcommand{\headrulewidth}{0.3pt}
+
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{#1}{}}
+%% % % % % % % % % % % % % % % % % % % % % % % % % % %
+%% % % % % % % % % % % % % % % % % % % % % % % % % % %
+%\newcommand\blfootnote[1]{%
+%  \begingroup
+%  \renewcommand\thefootnote{}\footnote{#1}%
+%  \addtocounter{footnote}{-1}%
+%  \endgroup
+%}
+\include{ch1/ps1}
+\let\cleardoublepage\clearpage
+\include{ch1/ch1} % Chapter 1
+\let\cleardoublepage\clearpage
+%%%
+\include{ch2/ps2}
+\let\cleardoublepage\clearpage 
+\include{ch2/ch2} % Chapter 2
+\let\cleardoublepage\clearpage
+%%%%%%
+\include{ch3/ps3} % page separator	%%% Blur parameter identification using SVM
+\let\cleardoublepage\clearpage
+\include{ch3/ch3} % Chapter 3
+\let\cleardoublepage\clearpage
+%%%%%%
+\include{ch4/ps4} % page separator	%%% Blur parameter identification using SVM
+\let\cleardoublepage\clearpage
+\include{ch4/ch4} % Chapter 4
+\let\cleardoublepage\clearpage
+
+%%%%%%
+\include{ch5/ps5} % page separator	%%% Blur parameter identification using SVM
+\let\cleardoublepage\clearpage
+\include{ch5/ch5} % Chapter 5
+\let\cleardoublepage\clearpage
+
+%%%%%%
+\include{ch6/ps6} % page separator	%%% Blur parameter identification using SVM
+\let\cleardoublepage\clearpage
+\include{ch6/ch6} % Chapter 5
+\let\cleardoublepage\clearpage
+
+
+
+\include{back/psbbl}
+\small
+\bibliographystyle{unsrt}
+\bibliography{back/thesis_references}
+\let\cleardoublepage\clearpage
+%
+
+
+\let\cleardoublepage\clearpage
+\addcontentsline{toc}{chapter}{Dissemination}
+\fontsize{12}{24}
+\selectfont
+\include{back/publications} % Publication
+%
+\rhead{{Appendix}}
+\lhead{}
+\include{Appendix/appendix}
+
+\end{document}
